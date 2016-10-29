@@ -1,6 +1,5 @@
-# check_remotenagios.pl
 v0.1 (c)2016 by @errecepe [CC BY-NC-SA] 3.0 license
-28/10/2016
+29/10/2016
 -----------------------------------------------------------------------------------------
 Description
 
@@ -34,7 +33,7 @@ Step 1:
 
 Step 2:
   In 'main Nagios server' add a command called: check_remotenagios
-  with command: $USER1$/check_remotenagios.pl $ARG1$ $ARG2$ $ARG3$ $ARG4$ $ARG5$
+  with command: $USER1$/check_remotenagios.pl $ARG1$ $ARG2$ $ARG3$ "$ARG4$" "$ARG5$"
 
 Step 3:
   apply changes, and restart nagios service after verify configuration (usually /usr/local/nagios/bin/nagios -v   /usr/local/nagios/etc/nagios.cfg)
@@ -65,6 +64,5 @@ You will get the state, and performance data from remote nagios server, so under
 This script can be used for distribute checks in a complex production environment. Or if you need to use checks using a big cpu load,
 can use an external server for distribute cpu load on 'main nagios server' easily.
 
-Tested with Remote nagios core 4 (4.1.1) version, from Nagios XI 5 as main Nagios server.
-Supposed to work in any nagios xi or core version, but only with remote core version. 
-At the moment dont work with remote Nagios XI servers (working on this feature)
+Tested with Remote nagios core 4 (4.1.1) version, from Nagios XI 5 (5.2.5) as main Nagios server.
+Supposed to work in any nagios xi or core version, but ONLY with remote core version. 
