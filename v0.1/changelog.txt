@@ -1,0 +1,14 @@
+v0.1 0:21 28/10/2016
+
+- script base development
+
+v0.1 3:21 29/10/2016
+
+- fixed host and service params passed as "With Spaces" now are working ok.
+  commands in nagios main server must be defined as: $USER1$/check_remotenagios.pl $ARG1$ $ARG2$ $ARG3$ "$ARG4$" "$ARG5$"
+
+- included in source a modification for use the script under windows os. Can be used from cmd, powershell or other scripts, to get info from      remote nagios servers. Requires curl command avalaible in PATH installed on windows host.
+
+- modified script to return as Status Information the original one.
+
+- final code optimization
