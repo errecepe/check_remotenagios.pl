@@ -66,3 +66,25 @@ can use an external server for distribute cpu load on 'main nagios server' easil
 
 Tested with Remote nagios core 4 (4.1.1) version, from Nagios XI 5 (5.2.5) as main Nagios server.
 Supposed to work in any nagios xi or core version, but ONLY with remote core version. 
+-----------------------------------------------------------------------------------------
+22:50 01/11/2016 Edit:
+
+Can be user with Nagios XI remote version following these steps:
+
+1	edit /etc/httpd/conf.d/nagios.conf
+	modify these lines
+		#   AuthName "Nagios Core"
+		#   AuthType Basic
+		#   AuthUserFile /usr/local/nagiosxi/etc/htpasswd.users
+		#   Require valid-user
+	CAUTION:We will give free access to NAGIOSXISERVER\nagios with this action!!!
+
+2	in Nagios XI web, Config, CCM, Nagios Core CGI Config
+	modify line
+		use_authentication=0
+
+3	from ssh restart httpd and nagios services
+
+Now we will check remote Nagios XI servers too!	
+
+Use it at your own risk!
